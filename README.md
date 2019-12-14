@@ -18,7 +18,7 @@ A Tiny Random Utility Generator
 ### Install
 
 ```
-git clone https://github.com/RetroVX/minee.git
+git clone https://github.com/RetroVX/random.git
 ```
 Or download from Zip
 
