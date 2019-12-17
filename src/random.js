@@ -40,7 +40,7 @@ export default class Random {
         
 
         // Create the generator
-        this.newGenerator(seed || new Date().getTime());
+        this.newGenerator(seed);
 
     }
 
@@ -51,7 +51,7 @@ export default class Random {
      * @param {*} seed - a number or string to use as the seed
      */
     newGenerator(seed) {        
-        this.seed = seed;
+        this.seed = seed || new Date().getTime();
         this.gen = new Alea(this.seed);
     }
 
