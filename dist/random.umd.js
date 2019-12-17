@@ -129,7 +129,7 @@
 
       this.seed = null; // Create the generator
 
-      this.newGenerator(seed || new Date().getTime());
+      this.newGenerator(seed);
     };
     /**
      * Create a new Alea generator with a new seed
@@ -139,7 +139,7 @@
 
 
     Random.prototype.newGenerator = function newGenerator (seed) {
-      this.seed = seed;
+      this.seed = seed || new Date().getTime();
       this.gen = new Alea(this.seed);
     };
     /**

@@ -6,13 +6,14 @@ A Tiny Random Utility Generator
 
 ### Features
 
-* Alea
+* Alea RNG
 * Seedable
-* random
+* Random
     * number
     * between
     * itemFromArray
     * entryFromObject
+* Tested with Jest
 * 2kb minified (<1kb minified + gzipped)
 
 ### Install
@@ -60,4 +61,4 @@ random.newGenerator(seed);
 Alea
  * Johannes BaagÃ¸e <baagoe@baagoe.com>, 2010
 
-### Version 1.0.1
+### Version 1.1.0

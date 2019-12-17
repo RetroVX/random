@@ -9,6 +9,7 @@ import { Alea } from "./alea.js";
  * From http://baagoe.com/en/RandomMusings/javascript/
  * Johannes BaagÃ¸e <baagoe@baagoe.com>, 2010  
  * @class Random
+ * @version 1.1.0
  * @example
  * const random = new Random('mySeed');
  * random.number(); 

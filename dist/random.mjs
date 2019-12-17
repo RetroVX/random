@@ -209,5 +209,5 @@ Random.prototype.entryFromObject = function entryFromObject (userObject) {
   return randomProp;
 };
 
-module.exports = Random;
-//# sourceMappingURL=random.js.map
+export default Random;
+//# sourceMappingURL=random.mjs.map

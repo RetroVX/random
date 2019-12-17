@@ -1,17 +1,20 @@
 {
   "source": "src/random.js",
-  "module": "dist/random.js",
+  "main": "dist/random.js",
+  "module": "dist/random.mjs",
   "unpkg": "dist/random.umd.js",
   "scripts": {
     "build": "microbundle",
-    "dev": "microbundle watch"
+    "dev": "microbundle watch",
+    "test": "jest"
   },
   "name": "random",
   "description": "Random Utility Generator",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Conor Irwin",
   "license": "MIT",
   "devDependencies": {
+    "jest": "^24.9.0",
     "microbundle": "^0.11.0"
   }
 }
