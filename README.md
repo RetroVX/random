@@ -23,13 +23,30 @@ git clone https://github.com/RetroVX/random.git
 ```
 Or download from Zip
 
+#### Node & Common
 ```javascript
-import Random from "./path/to/random.js";
+const Random = require('./path/to/random.min.js');
 
 const seed = 'mySeed';
-
-// if the seed argument is undefined then the seed is created using new Date().getTime();
 const random = new Random(seed);
+```
+
+#### Module
+```javascript
+import Random from "./path/to/random.min.mjs";
+
+const seed = 'mySeed';
+const random = new Random(seed);
+```
+
+#### UMD
+```html
+    <script type="text/javascript" src="path/to/random.umd.min.js"></script>
+```
+```javascript
+const seed = 'mySeed';
+const random = new window.random(seed);
+
 ```
 
 ### Examples

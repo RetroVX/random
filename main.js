@@ -1,4 +1,4 @@
-import Random from "./src/random.js";
+import Random from './dist/random.min.mjs';
 
 const seed = 'helloWorld';
 const random = new Random(seed);
