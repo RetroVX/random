@@ -13,6 +13,7 @@ A Tiny Random Utility Generator
     * between
     * itemFromArray
     * entryFromObject
+    * keyFromObject
 * Tested with Jest
 * 2kb minified (<1kb minified + gzipped)
 
@@ -25,7 +26,7 @@ Or download from Zip
 
 #### Node & Common
 ```javascript
-const Random = require('./path/to/random.min.js');
+const Random = require('./path/to/random.js');
 
 const seed = 'mySeed';
 const random = new Random(seed);
@@ -33,7 +34,7 @@ const random = new Random(seed);
 
 #### Module
 ```javascript
-import Random from "./path/to/random.min.mjs";
+import Random from "./path/to/random.mjs";
 
 const seed = 'mySeed';
 const random = new Random(seed);
@@ -41,7 +42,7 @@ const random = new Random(seed);
 
 #### UMD
 ```html
-    <script type="text/javascript" src="path/to/random.umd.min.js"></script>
+<script type="text/javascript" src="path/to/random.umd.js"></script>
 ```
 ```javascript
 const seed = 'mySeed';
@@ -69,6 +70,9 @@ random.itemFromArray([1, 2, 3, 4, 5]); -> 2
 // picks a random key/value pair and outputs as an array
 random.entryFromObject({prop1: 'hello', prop2: 'world'}); -> ['prop1', 'hello']
 
+// picks a random key from an object
+random.keyFromObject({prop1: 'hello', prop2: 'world'}); -> 'prop2'
+
 // new seed
 random.newGenerator(seed);
 
@@ -78,4 +82,4 @@ random.newGenerator(seed);
 Alea
  * Johannes BaagÃ¸e <baagoe@baagoe.com>, 2010
 
-### Version 1.1.0
+### Version 1.2.0

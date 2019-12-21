@@ -4,12 +4,12 @@ import { Alea } from "./alea.js";
  * @author Conor Irwin <https://github.com/RetroVX> 
  * @license {@link http://opensource.org/licenses/MIT|MIT License}
  * @classdesc
- * A basic class to create seedable random numbers using alea.  
+ * A basic random utility generator using alea for seedable randomness  
  * Credit Alea: 
  * From http://baagoe.com/en/RandomMusings/javascript/
  * Johannes BaagÃ¸e <baagoe@baagoe.com>, 2010  
  * @class Random
- * @version 1.1.0
+ * @version 1.2.0
  * @example
  * const random = new Random('mySeed');
  * random.number(); 
@@ -124,5 +124,27 @@ export default class Random {
         const randomProp = this.itemFromArray(entries);
 
         return randomProp;
+    }
+
+
+    /**
+     * Returns a random key from an object
+     * @method Random.keyFromObject
+     * @param {object} userObject - the object to pass in
+     * @returns {string} Returns a string with the random key
+     * @example
+     * const myObject = {
+     *     prop: 'hello',
+     *     prop2: 'world',
+     *     prop3: 42
+     * }
+     * const randomKeyFromObject = random.keyFromObject(myObject);
+     * -> 'prop3'
+     */
+    keyFromObject(userObject) {
+        const keys = Object.keys(userObject);
+        const randomKey = this.itemFromArray(keys);
+
+        return randomKey;
     }
 }

@@ -58,7 +58,19 @@ describe('Testing the Random class', () => {
 
         expect(testObject).toHaveProperty(entry[0], entry[1]);
 
-
     });
+
+    test('random.keyFromObject should return a random key from an object', () => {
+        const testObject = {
+            prop1: 'hello',
+            prop2: 'world',
+            prop3: 42,
+        }
+        // should always be 'prop3'
+        const key = random.keyFromObject(testObject);
+
+        expect(key).toBe('prop3');
+        expect(key).toMatch('prop3');
+    })
 
 });
