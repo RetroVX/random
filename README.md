@@ -11,6 +11,7 @@ A Tiny Random Utility Generator
 * Random
     * number
     * between
+    * chance
     * itemFromArray
     * entryFromObject
     * keyFromObject
@@ -53,7 +54,6 @@ const random = new window.random(seed);
 ### Examples
 
 ```javascript
-
 // generate a random number between 0 and 1.
 // use this in place of Math.random()
 random.gen(); -> 0.9401234467513859
@@ -63,6 +63,9 @@ random.number(100); -> 42
 
 // generates a random number using a min and max number
 random.between(1, 25); -> 17
+
+// percent chance to happen
+random.chance(50) -> true
 
 // picks a random item from an array
 random.itemFromArray([1, 2, 3, 4, 5]); -> 2
@@ -75,11 +78,10 @@ random.keyFromObject({prop1: 'hello', prop2: 'world'}); -> 'prop2'
 
 // new seed
 random.newGenerator(seed);
-
 ```
 
 ### Credit
 Alea
  * Johannes BaagÃ¸e <baagoe@baagoe.com>, 2010
 
-### Version 1.2.0
+### Version 1.3.0

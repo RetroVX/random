@@ -1,7 +1,7 @@
 import Random from './src/random.js';
 
 const seed = 'helloWorld';
-const random = new Random(seed);
+const random = new Random();
 
 const obj = {
     prop1: 'hello',
@@ -15,6 +15,7 @@ const table = [
         number: random.number(),
         between: random.between(1, 100),
         key: random.keyFromObject(obj),
+        chance: random.chance(50)
     }
 ];
 

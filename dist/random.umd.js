@@ -103,7 +103,7 @@
      * From http://baagoe.com/en/RandomMusings/javascript/
      * Johannes BaagÃ¸e <baagoe@baagoe.com>, 2010  
      * @class Random
-     * @version 1.2.0
+     * @version 1.3.0
      * @example
      * const random = new Random('mySeed');
      * random.number(); 
@@ -174,6 +174,19 @@
 
     Random.prototype.between = function between (min, max) {
       return Math.floor(this.gen() * (max - min + 1)) + min;
+    };
+    /**
+     * Returns a boolean depending on if the percentChance check is passed
+     * @param {number} percentChance - the number (percent out of 100)
+     * @return {boolean}
+     * @example
+     * random.chance(50) -> 50% chance of happening
+     * random.chance(1) -> 1% chance of happening
+     */
+
+
+    Random.prototype.chance = function chance (percentChance) {
+      return !!percentChance && this.gen() * 100 <= percentChance;
     };
     /**
      * Returns a random item from an array

@@ -9,7 +9,7 @@ import { Alea } from "./alea.js";
  * From http://baagoe.com/en/RandomMusings/javascript/
  * Johannes BaagÃ¸e <baagoe@baagoe.com>, 2010  
  * @class Random
- * @version 1.2.0
+ * @version 1.3.0
  * @example
  * const random = new Random('mySeed');
  * random.number(); 
@@ -84,6 +84,19 @@ export default class Random {
      */
     between(min, max) { 
         return Math.floor(this.gen() * (max - min + 1)) + min;
+    }
+
+
+    /**
+     * Returns a boolean depending on if the percentChance check is passed
+     * @param {number} percentChance - the number (percent out of 100)
+     * @return {boolean}
+     * @example
+     * random.chance(50) -> 50% chance of happening
+     * random.chance(1) -> 1% chance of happening
+     */
+    chance(percentChance) {
+        return !!percentChance && this.gen() * 100 <= percentChance;
     }
 
 

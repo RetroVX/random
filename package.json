@@ -10,7 +10,7 @@
   },
   "name": "random",
   "description": "Random Utility Generator",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "author": "Conor Irwin",
   "license": "MIT",
   "devDependencies": {

@@ -33,12 +33,18 @@ describe('Testing the Random class', () => {
 
     });
 
+    test('random.chance should return a boolean', () => {
+
+        const value = random.chance(50);
+        expect(value).toBeFalsy();
+    })
+
     test('random.itemFromArray should output a random item from the passed in array', () => {
         const mockArray = [1, 2, 3, 4, 5];
-        // item should always be '4'
+        // item should always be '3'
         const item = random.itemFromArray(mockArray);
 
-        expect(item).toBe(4);
+        expect(item).toBe(3);
     });
 
     test('random.entryFromObject should output an array with a key value pair', () => {
@@ -50,11 +56,11 @@ describe('Testing the Random class', () => {
         const entry = random.entryFromObject(testObject);
         expect(Array.isArray(entry)).toBeTruthy();
 
-        expect(entry).toContain('prop2');
-        expect(entry).toContain('world');
+        expect(entry).toContain('prop3');
+        expect(entry).toContain(42);
 
-        expect(entry[0]).toBe('prop2');
-        expect(entry[1]).toBe('world');
+        expect(entry[0]).toBe('prop3');
+        expect(entry[1]).toBe(42);
 
         expect(testObject).toHaveProperty(entry[0], entry[1]);
 
